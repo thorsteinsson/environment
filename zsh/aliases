@@ -1,13 +1,6 @@
 # edit shortcut keys with live reload
 alias aliases='vim ~/.zsh/aliases && source ~/.zsh/aliases'
 
-# django
-function ds(){
-  defPort=8000
-  port=${1:-$defPort} # default to port 8000
-  bin/django runserver 0.0.0.0:$port
-}
-
 # cd
 alias ..='cd ..'
 
@@ -49,6 +42,13 @@ alias gb='git branch'
 alias gba='git branch -a'
 alias gs='git status'
 alias grm="git status | grep deleted | awk '{print \$3}' | xargs git rm"
+
+# grunt
+alias gr='grunt'
+alias grw='grunt watch'
+
+# nodejs
+alias srv='up -w server.js'
 
 # commands starting with % for pasting from web
 alias %=' '
